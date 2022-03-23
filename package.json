@@ -19,15 +19,18 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "webpack serve --port 9000 --env isLocal",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "test": "cross-env BABEL_ENV=test jest --passWithNoTests",
+    "format": "prettier --write .",
+    "build": "webpack --mode=production",
+    "analyze": "webpack --env analyze"
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "important-stuff",
+      "plugin:prettier/recommended"
     ]
   },
   "browserslist": {
@@ -47,6 +50,7 @@
     "@babel/preset-env": "^7.16.11",
     "@types/systemjs": "^6.1.1",
     "babel-loader": "^8.2.4",
+    "cross-env": "^7.0.3",
     "eslint": "^8.11.0",
     "eslint-config-important-stuff": "^1.1.0",
     "eslint-config-prettier": "^8.5.0",
@@ -54,6 +58,7 @@
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.5.1",
     "jest-cli": "^27.5.1",
+    "prettier": "^2.6.0",
     "serve": "^13.0.2",
     "single-spa-layout": "^2.0.1",
     "webpack": "^5.70.0",
