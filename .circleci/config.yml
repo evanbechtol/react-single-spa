@@ -2,7 +2,7 @@ version: 2
 jobs:
   setup:
     docker:
-      - image: circleci/node:latest
+      - image: cimg/node:17.7.2
     steps:
       - checkout
       - restore_cache:
@@ -16,7 +16,7 @@ jobs:
             - node_modules
   build:
     docker:
-      - image: circleci/node:latest
+      - image: cimg/node:17.7.2
     steps:
       - checkout
       - restore_cache:
@@ -35,7 +35,7 @@ jobs:
           destination: dist
   test:
     docker:
-      - image: circleci/node:latest
+      - image: cimg/node:17.7.2
     steps:
       - checkout
       - restore_cache:
