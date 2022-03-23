@@ -26,6 +26,8 @@
   },
   "eslintConfig": {
     "extends": [
+      "important-stuff",
+      "plugin:prettier/recommended",
       "react-app",
       "react-app/jest"
     ]
