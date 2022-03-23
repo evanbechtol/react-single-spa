@@ -22,7 +22,7 @@
     "start": "webpack serve --port 9000 --env isLocal",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
-    "test": "jest --passWithNoTests",
+    "test": "cross-env BABEL_ENV=test jest --passWithNoTests",
     "format": "prettier --write .",
     "build": "webpack --mode=production",
     "analyze": "webpack --env analyze"
@@ -50,6 +50,7 @@
     "@babel/preset-env": "^7.16.11",
     "@types/systemjs": "^6.1.1",
     "babel-loader": "^8.2.4",
+    "cross-env": "^7.0.3",
     "eslint": "^8.11.0",
     "eslint-config-important-stuff": "^1.1.0",
     "eslint-config-prettier": "^8.5.0",
