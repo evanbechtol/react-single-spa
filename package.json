@@ -30,7 +30,9 @@
   "eslintConfig": {
     "extends": [
       "important-stuff",
-      "plugin:prettier/recommended"
+      "plugin:prettier/recommended",
+      "react-app",
+      "react-app/jest"
     ]
   },
   "browserslist": {
